@@ -1,0 +1,443 @@
+/* ------------------------
+    GOOGLE FONTS IMPORT
+-------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* ---------------------------
+    VARIABLE DECLARATION
+------------------------------ */
+:root {
+    --banner-bg: #2D25A0;
+    --link-btn-bg: #E02C6D;
+    --link-btn-hover: #c71154;
+    --nav-link-bg: #120b6f;
+    --box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    --white-color: #FFFFFF;
+    --transition: 0.4s ease-in;
+    --hover-text-color: #E02C6D;
+    --p-color: #6C6C6C;
+    --section-bg: #f7f7f7; 
+
+}
+/* ------------------------
+    COMMON STYLE
+-------------------------- */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--white-color);
+}
+main, header {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+}
+ul, h1, h2, h3, p, figure {
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+.section-bg {
+    background-color: var(--section-bg);
+}
+.link-btn {
+    background-color: var(--link-btn-bg);
+    line-height: 24px;
+    display: inline-block;
+    padding: 10px 26px;
+    text-transform: capitalize;
+    color: var(--white-color);
+    transition: var(--transition);
+}
+.link-btn i {
+    transition: var(--transition);
+    position: relative;
+    left: 5px;
+}
+.link-btn:hover {
+    background-color: var(--link-btn-hover);
+}
+.link-btn:hover i.fa-arrow-right {
+    left: 10px;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+/* --------------------------------
+    NAV STYLE
+---------------------------------- */
+.nav-banner {
+    background-color: var(--banner-bg);
+    margin-bottom: 70px;
+}
+header a {
+    color: var(--white-color);
+}
+nav ul {
+    display: flex;
+}
+nav ul li a {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+    padding: 55px 15px;
+    transition: var(--transition);
+}
+nav ul li a:hover {
+    background-color: var(--nav-link-bg);
+}
+.login a i {
+    line-height: 24px;
+    position: relative;
+    left: -8px;
+    transition: var(--transition);
+}
+.login a:hover i {
+    left: -5px;
+}
+
+/* --------------------------------
+        BANNER STYLE
+---------------------------------- */
+
+.banner {
+    padding-bottom: 80px;
+}
+.banner-caption {
+    max-width: 485px;
+    padding: 15px;
+}
+.banner-caption h1 {
+    font-size: 64px;
+    color: var(--white-color);
+    line-height: 80px;
+    margin-bottom: 15px;
+}
+.banner-fig {
+    position: relative;
+}
+#ball {
+    position: absolute;
+    left: 0;
+    transform: translateY(80px);
+}
+@keyframes kick {
+    0% {
+        transform: translateY(80px);
+    }
+    50% {
+        transform: translate(32px, 119px);
+    }
+    100% {
+        transform: translateY(80px);
+    }
+  }
+  .banner-fig:hover #ball {
+      animation: kick  var(--transition);
+  }
+  /* --------------------------------
+        PLAYERS SECTION STYLE
+---------------------------------- */
+.players,
+.copa-match,
+.coachs-area {
+    margin-bottom: 70px;
+}
+.player {
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+.player figure {
+    width: 300px;
+    height: 256px;
+    overflow: hidden;
+}
+.player figure img,
+.coach img {
+    transform: scale(1);
+    transition: var(--transition);
+}
+.player:hover figure img,
+.coach:hover img {
+    transform: scale(1.1);
+}
+.player-info h3,
+.coach h3 {
+    font-size: 28px;
+    line-height: 40px;
+    margin: 5px 0;
+    transition: var(--transition);
+}
+.player:hover .player-info h3,
+.coach:hover h3 {
+    color: var(--hover-text-color);
+}
+.player-info p {
+    color: var(--p-color);
+}
+  /* --------------------------------
+        COPA MATCH
+---------------------------------- */
+.copa-match,
+.membership-area {
+    padding: 70px 0;
+}
+.highlights {
+    padding-right: 32px;
+}
+.highlights h3, 
+.coachs-intro h2,
+.membership-intro h2 {
+    font-size: 43px;
+    line-height: 60px;
+    margin-bottom: 5px;
+}
+.highlights p,
+.coach p {
+    color: var(--p-color);
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+.match-fig {
+    padding: 30px;
+}
+/* --------------------------------
+        COACHES STYLE
+---------------------------------- */
+.coach {
+    text-align: center;
+}
+.coach img {
+    max-width: 100%;
+}
+/* --------------------------------
+        MEMBERSHIP STYLE
+---------------------------------- */
+.single-membership {
+    background-color: var(--white-color);
+    text-align: center;
+    padding:30px 15px;
+    margin: 15px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    top: 0;
+    transition: var(--transition);
+}
+.single-membership:hover {
+    top: -10px;
+}
+
+.single-membership h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.single-membership i {
+    font-size: 54px;
+}
+
+.single-membership p {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+/* --------------------------------
+            FOOTER STYLE
+---------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 70px 0;
+}
+footer ul {
+    margin-bottom: 15px;
+}
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+footer ul li a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+    color: #969BAB;
+    background-color: #E7E7E8;
+    border-radius: 16px;
+    transition: var(--transition);
+}
+footer ul li a:hover {
+    background-color: #10437A;
+    color: var(--white-color);
+}
+footer p {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+/****************************** --------------------------------
+                    MEDIA QUERY FOR RESPONSIVE
+---------------------------------- ******************************/
+@media screen and (max-width: 1010px) {
+    .player {
+        max-width: 250px;
+    }
+    .player figure img {
+        width: 100%;
+    }
+    .player figure {
+        width: 100%;
+        height: 213px;
+    }
+}
+@media screen and (max-width: 992px) {
+    /* banner */
+    .banner-caption h1 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .player-info h3, .coach h3 {
+        font-size: 22px;
+    }
+    .highlights h3, .coachs-intro h2, .membership-intro h2 {
+        font-size: 28px;
+        line-height: 49px;
+    }
+    .highlights {
+        padding: 15px;
+    }
+    .copa-match .d-flex {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .match-fig {
+        width: 100%;
+        padding: 0;
+    }
+    .match-fig img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 810px) {
+    /* common */
+    .banner {
+        margin-top: 30px;
+        padding-bottom: 45px;
+    }
+    .banner-caption {
+        padding: 0;
+    }
+    .nav-banner, 
+    .players, 
+    .copa-match, 
+    .coachs-area {
+        margin-bottom: 50px;
+    }
+    .copa-match, .membership-area {
+        padding: 50px 0;
+    }
+/* header and nav */
+    header.d-flex {
+        flex-wrap: wrap-reverse;
+        justify-content: flex-end;
+    }
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li a {
+        padding: 15px;
+    }
+    .banner.d-flex {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .banner-caption {
+        max-width: 100%;
+        text-align: center;
+    }
+    .d-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+    }
+    /* player */
+    .player {
+        max-width: 100%;
+    }
+    .player:hover figure img, .coach:hover img {
+        transform: scale(1);
+    }
+    .coachs-intro,
+    .membership-intro {
+        padding-left: 15px;
+    }
+    
+}
+@media screen and (max-width: 580px) {
+    img#mesy {
+        max-width: 300px;
+    }
+    img#ball {
+        max-width: 45px;
+        transform: translateY(24px);
+    }
+    nav ul li a {
+        padding: 10px;
+    }
+    @keyframes kick {
+        0% {
+            transform: translateY(24px);
+        }
+        50% {
+            transform: translate(28px, 60px);
+        }
+        100% {
+            transform: translateY(24px);
+        }
+      }
+      .d-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 30px;
+    }
+    footer img {
+        max-width: 250px;
+    }
+    footer p {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 320px) {
+    img#mesy {
+        max-width: 230px;
+    }
+    img#ball {
+        max-width: 25px;
+        transform: translateY(24px);
+    }
+    .banner-caption h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
