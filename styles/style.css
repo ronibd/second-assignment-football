@@ -3,9 +3,9 @@
 -------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/* ---------------------------
-    VARIABLE DECLARATION
------------------------------- */
+/* ---------------------------------------------------
+    VARIABLE DECLARATION For all
+------------------------------------------------------ */
 :root {
     --banner-bg: #2D25A0;
     --link-btn-bg: #E02C6D;
